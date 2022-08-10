@@ -5,13 +5,13 @@ import Button from "./../components/Button";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { useContext } from "react";
 import { OnboardingContext } from "./../context/OnboardingContext";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Step4 = ({ isVisible }) => {
   const { gotoNextStep } = useContext(OnboardingContext);
 
   return (
-    <AnimatePresence>
+    <>
       {isVisible && (
         <motion.div
           className="motion-div"
@@ -33,7 +33,7 @@ const Step4 = ({ isVisible }) => {
           </div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </>
   );
 };
 

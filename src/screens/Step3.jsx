@@ -6,14 +6,14 @@ import Radio from "../components/CustomRadio";
 import { HiUser, HiUserGroup } from "react-icons/hi";
 import { useState, useContext } from "react";
 import { OnboardingContext } from "./../context/OnboardingContext";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Step3 = ({ isVisible }) => {
   const { gotoNextStep } = useContext(OnboardingContext);
 
   const [selected, setSelected] = useState("individual");
   return (
-    <AnimatePresence>
+    <>
       {isVisible && (
         <motion.div
           className="motion-div"
@@ -47,7 +47,7 @@ const Step3 = ({ isVisible }) => {
           </div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </>
   );
 };
 

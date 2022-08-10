@@ -4,13 +4,13 @@ import Input from "./../components/Input";
 import Button from "./../components/Button";
 import { useContext } from "react";
 import { OnboardingContext } from "./../context/OnboardingContext";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Step2 = ({ isVisible }) => {
   const { gotoNextStep } = useContext(OnboardingContext);
 
   return (
-    <AnimatePresence>
+    <>
       {isVisible && (
         <motion.div
           className="motion-div"
@@ -33,7 +33,7 @@ const Step2 = ({ isVisible }) => {
           </div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </>
   );
 };
 

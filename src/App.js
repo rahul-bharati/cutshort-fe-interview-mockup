@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import { useContext } from "react";
 import Logo from "./components/Logo";
 import Step from "./components/Step";
@@ -17,10 +18,12 @@ function App() {
       <div className="step-container">
         <Step />
       </div>
-      <Step1 isVisible={currentStep === 0} />
-      <Step2 isVisible={currentStep === 1} />
-      <Step3 isVisible={currentStep === 2} />
-      <Step4 isVisible={currentStep === 3} />
+      <AnimatePresence>
+        <Step1 isVisible={currentStep === 0} />
+        <Step2 isVisible={currentStep === 1} />
+        <Step3 isVisible={currentStep === 2} />
+        <Step4 isVisible={currentStep === 3} />
+      </AnimatePresence>
     </div>
   );
 }
