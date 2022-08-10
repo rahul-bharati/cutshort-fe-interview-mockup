@@ -22,12 +22,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   height: 100%;
 }
 
 .App {
   padding: 60px 10px;
+  padding-top: 12vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,6 +170,7 @@ body {
   font-weight: 400;
   border-radius: 6px;
   margin-top: 25px;
+  cursor: pointer;
 
   &.btn__main {
     background-color: var(--primary-color);
@@ -183,6 +184,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  max-width: 530px;
 
   & .step-counter {
     height: 50px;
@@ -257,7 +259,7 @@ body {
 }
 
 .inputs-container {
-  max-width: 600px;
+  max-width: 530px;
   width: 100%;
 }
 
