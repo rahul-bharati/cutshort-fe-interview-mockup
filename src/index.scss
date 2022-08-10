@@ -273,3 +273,10 @@ body {
   font-size: 100px;
   color: var(--primary-color);
 }
+
+.motion-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

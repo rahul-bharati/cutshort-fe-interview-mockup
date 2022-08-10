@@ -6,15 +6,22 @@ import Radio from "../components/CustomRadio";
 import { HiUser, HiUserGroup } from "react-icons/hi";
 import { useState, useContext } from "react";
 import { OnboardingContext } from "./../context/OnboardingContext";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Step3 = ({ isVisible }) => {
   const { gotoNextStep } = useContext(OnboardingContext);
 
   const [selected, setSelected] = useState("individual");
   return (
-    <>
+    <AnimatePresence>
       {isVisible && (
-        <>
+        <motion.div
+          className="motion-div"
+          key="step3"
+          initial={{ x: 300, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: -300, opacity: 0 }}
+        >
           <Heading text="How are you planning to use Eden?" />
           <Subheading text="We'll streamline your setup experience accordingly" />
           <div className="inputs-container">
@@ -38,9 +45,9 @@ const Step3 = ({ isVisible }) => {
             </div>
             <Button text="Create Workspace" onClick={gotoNextStep} />
           </div>
-        </>
+        </motion.div>
       )}
-    </>
+    </AnimatePresence>
   );
 };
 
