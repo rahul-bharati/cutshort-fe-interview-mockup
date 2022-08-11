@@ -4,6 +4,7 @@ export const OnboardingContext = createContext("");
 
 export const OnboardingContextProvider = ({ children }) => {
   const [currentStep, setCurrentStep] = useState(0);
+  const [userName, setUserName] = useState("");
 
   const gotoNextStep = () => {
     if (currentStep === 3) setCurrentStep(0);
@@ -11,7 +12,9 @@ export const OnboardingContextProvider = ({ children }) => {
   };
 
   return (
-    <OnboardingContext.Provider value={{ currentStep, gotoNextStep }}>
+    <OnboardingContext.Provider
+      value={{ currentStep, gotoNextStep, userName, setUserName }}
+    >
       {children}
     </OnboardingContext.Provider>
   );

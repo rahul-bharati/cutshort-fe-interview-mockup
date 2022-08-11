@@ -1,4 +1,11 @@
-const Input = ({ type, placeholder, label, optionalText = "" }) => {
+const Input = ({
+  type,
+  placeholder,
+  label,
+  optionalText = "",
+  value,
+  onChange,
+}) => {
   return (
     <div className="input_group">
       <label className="input_group__label">
@@ -9,6 +16,8 @@ const Input = ({ type, placeholder, label, optionalText = "" }) => {
           type={type}
           placeholder={placeholder}
           className="input_group__field"
+          value={value}
+          onChange={onChange}
         />
       ) : (
         <div className="url-input-group">
@@ -16,6 +25,8 @@ const Input = ({ type, placeholder, label, optionalText = "" }) => {
           <input
             type={type}
             placeholder={placeholder}
+            value={value}
+            onChange={onChange}
             className="url-input-field"
           />
         </div>

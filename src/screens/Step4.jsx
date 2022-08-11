@@ -8,7 +8,7 @@ import { OnboardingContext } from "./../context/OnboardingContext";
 import { motion } from "framer-motion";
 
 const Step4 = ({ isVisible }) => {
-  const { gotoNextStep } = useContext(OnboardingContext);
+  const { gotoNextStep, userName } = useContext(OnboardingContext);
 
   return (
     <>
@@ -23,7 +23,7 @@ const Step4 = ({ isVisible }) => {
           <div className="check-div">
             <AiFillCheckCircle />
           </div>
-          <Heading text="Congratulations, Eren!" />
+          <Heading text={`Congratulations, ${userName}`} />
           <Subheading
             text="You have completed the onboarding, you can start using Eden!"
             isLast

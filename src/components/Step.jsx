@@ -4,8 +4,6 @@ import { OnboardingContext } from "./../context/OnboardingContext";
 const Step = () => {
   const { currentStep } = useContext(OnboardingContext);
 
-  console.log({ currentStep });
-
   return (
     <div className="step-container">
       <div className={`step-counter ${currentStep >= 0 ? "fill" : ""}`}>1</div>
