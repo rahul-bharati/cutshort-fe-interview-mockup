@@ -195,13 +195,31 @@ body {
     border-radius: 50%;
     border: 1px solid var(--dark-gray-color);
     background-color: #fff;
+
+    &.fill {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+      border: 1px solid var(--primary-color);
+    }
   }
 
   & .divider {
-    height: 2px;
+    height: 3px;
     width: auto;
     flex-grow: 1;
     background: var(--dark-gray-color);
+
+    &.fill {
+      background-color: var(--primary-color);
+    }
+
+    &.half-fill {
+      background-image: linear-gradient(
+        to right,
+        var(--primary-color) 50%,
+        var(--dark-gray-color) 50%
+      );
+    }
   }
 
   // &::before {
